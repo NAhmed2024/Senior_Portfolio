@@ -12,8 +12,7 @@ p {
 h1 {
   font-weight: bold;
   color: rgb(62, 0, 201);
-  font-family: cursive;
-  text-shadow: 2px 2px #110759;
+  font-family: sans-serif;
   text-decoration: underline;
   text-align: center;
 }
