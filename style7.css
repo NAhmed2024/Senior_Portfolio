@@ -28,7 +28,9 @@ img {
   border-width: 12px;
   border-style: solid;
   border-radius: 60px
-}
+h6 {
+     color: rgb(48,69,41); 
+  }
 ul {
   list-style-type: none;
   margin: 0;
@@ -55,8 +57,4 @@ li a:hover:not(.active) {
 }
 .active {
   background-color: rgb(250, 190, 230);
-}  color: rgb(0, 28, 134);
-}
-.pointed{
-  color: rgb(0, 0, 255);
 }
