@@ -1,36 +1,47 @@
-body {
-  background: rgb(162, 203, 255);
-}
-p {
-  background-color: rgb(200, 207, 255);
-  color: #2719a1;
-  font-family: Cursive;
-  font-size: 12px;
-  font-weight: bold;
-  text-decoration: underline;
-}
-h1 {
-  font-weight: bold;
-  color: rgb(62, 0, 201);
-  font-family: cursive;
-  text-shadow: 2px 2px #110759;
-  text-decoration: underline;
+body{
+  background-color: rgb(222, 161, 174);
+  color: white;
+  font-family: sans-serif;
   text-align: center;
 }
-h2{
-  text-shadow: -2px 2px black;
-  text-decoration: underline;
+h1{
+  color: rgb(255, 234, 234);
+  font-family: bold;
+  text-shadow: -2px 2px rgb(255, 196, 196);
+  font-size: 40px;
 }
-img {
+img{
   float: center;
-  margin: 10px;
-  border-color: rgb(93, 72, 255);
-  border-width: 12px;
+  border-color: rgb(255, 234, 234);
+  border-width: 15px;
   border-style: solid;
-  border-radius: 60px
-h6 {
-     color: rgb(48,69,41); 
-  }
+  border-radius: 65px;
+  border-style: double;
+}
+p{
+  font-weight: bold;
+  font-size: 20px;
+}
+h3{
+text-align: left;
+}
+h2{
+  color: rgb(255, 234, 234);
+  font-family: bold;
+  text-shadow: -2px 2px rgb(212, 4, 78);
+  font-size: 30px;
+}
+.me{
+color: rgb(255, 234, 234);
+  font-family: bold;
+  text-shadow: -2px 2px rgb(255, 196, 196);
+}
+.flower {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 ul {
   list-style-type: none;
   margin: 0;
