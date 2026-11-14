@@ -1,67 +1,112 @@
-body{
-   background-color: rgb(207, 255, 213);
-  color: white;
-  font-family: sans-serif;
-  text-align: center;
-}
-h1{
-  color: rgb(240, 255, 242);
-  font-family: bold;
-  text-shadow: -2px 2px rgb(46, 191, 65);
-  font-size: 40px;
-}
-p{
-  font-weight: bold;
-  font-size: 20px;
-  background-color: rgb(74,96,74);
-}
-h2{
-  color: rgb(240, 255, 242);
-  font-family: bold;
-  text-shadow: -2px 2px rgb(8, 61, 15);
-  font-size: 30px;
-}
-.flower {
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-img{
-  float: center;
-  border-color: rgb(196, 164, 132);
-  border-width: 15px;
-  border-style: solid;
-  border-radius: 65px;
-  border-style: double;
-}
-h6 {
-     color: rgb(48,69,41); 
-  }
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: rgb(0, 0, 128);
-}
-li {
-  float: left;
-  border-right:3px solid rgb(0, 0, 255);
-}
-li:last-child {
-  border-right: none;
-}
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-li a:hover:not(.active) {
-  background-color: rgb(230, 170, 240);
-}
-.active {
-  background-color: rgb(250, 190, 230);
-}
+   * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;      /* centers the box vertically */
+      justify-content: center;  /* centers the box horizontally */
+      padding: 24px;
+      background: #e6eaf8;
+      font-family: "Manrope", "Segoe UI", Arial, sans-serif;
+      color: #ffffff;
+    }
+
+    /* The large colored box */
+    .contact-box {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      width: 100%;
+      max-width: 880px;
+      padding: 56px;
+      background: #2b2f77;
+      border-radius: 28px;
+      box-shadow: 0 24px 60px rgba(43, 47, 119, 0.35);
+    }
+
+    /* The picture beside the text */
+    .photo {
+      flex: 0 0 280px;
+      width: 280px;
+      height: 340px;
+      object-fit: cover;        /* keeps your photo a perfect fit */
+      border-radius: 20px;
+      border: 5px solid #ffffff;
+      background: #4a4fa8;
+    }
+
+    .details {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .details h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      margin-bottom: 28px;
+      letter-spacing: -0.02em;
+    }
+
+    .details ul {
+      list-style: none;
+    }
+
+    .details li {
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+      font-size: 1.05rem;
+      line-height: 1.5;
+      overflow-wrap: anywhere;
+    }
+
+    .details li:last-child {
+      border-bottom: none;
+    }
+
+    .details strong {
+      display: block;
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: #ffd166;
+      margin-bottom: 2px;
+    }
+
+    .details a {
+      color: #ffffff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .details a:hover,
+    .details a:focus-visible {
+      color: #ffd166;
+      outline: none;
+    }
+
+    /* Phones and small screens: stack the photo above the text */
+    @media (max-width: 720px) {
+      .contact-box {
+        flex-direction: column;
+        padding: 36px 28px;
+        gap: 32px;
+      }
+
+      .photo {
+        flex: none;
+        width: 100%;
+        max-width: 280px;
+        height: 320px;
+      }
+
+      .details {
+        width: 100%;
+      }
+
+      .details h1 {
+        font-size: 2rem;
+      }
+    }
