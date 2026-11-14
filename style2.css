@@ -1,112 +1,98 @@
-   * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+ { box-sizing: border-box; margin: 0; padding: 0; }
 
-    body {
+    /* ---------- PAGE ---------- */
+    #page {
       min-height: 100vh;
       display: flex;
-      align-items: center;      /* centers the box vertically */
-      justify-content: center;  /* centers the box horizontally */
+      align-items: center;
+      justify-content: center;
       padding: 24px;
       background: #e6eaf8;
-      font-family: "Manrope", "Segoe UI", Arial, sans-serif;
-      color: #ffffff;
+      font-family: "Segoe UI", Arial, sans-serif;
     }
 
-    /* The large colored box */
-    .contact-box {
+    /* ---------- LARGE COLORED BOX ---------- */
+    #card {
       display: flex;
       align-items: center;
-      gap: 48px;
+      gap: 40px;
       width: 100%;
-      max-width: 880px;
-      padding: 56px;
+      max-width: 760px;
+      padding: 44px;
       background: #2b2f77;
-      border-radius: 28px;
-      box-shadow: 0 24px 60px rgba(43, 47, 119, 0.35);
+      border-radius: 24px;
+      box-shadow: 0 20px 50px rgba(43, 47, 119, 0.35);
     }
 
-    /* The picture beside the text */
-    .photo {
-      flex: 0 0 280px;
-      width: 280px;
-      height: 340px;
-      object-fit: cover;        /* keeps your photo a perfect fit */
-      border-radius: 20px;
-      border: 5px solid #ffffff;
+    /* ---------- PHOTO (its own ID, no text styles) ---------- */
+    #photo-frame {
+      flex: 0 0 200px;
+      width: 200px;
+      height: 250px;
+    }
+
+    #photo {
+      display: block;
+      width: 200px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 4px solid #ffffff;
       background: #4a4fa8;
     }
 
-    .details {
+    /* ---------- TEXT (its own ID) ---------- */
+    #text-box {
       flex: 1;
       min-width: 0;
+      color: #ffffff;
+      font-size: 17px;
+      line-height: 1.5;
     }
 
-    .details h1 {
-      font-size: 2.4rem;
-      font-weight: 800;
-      margin-bottom: 28px;
-      letter-spacing: -0.02em;
+    #title {
+      font-size: 34px;
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 18px;
     }
 
-    .details ul {
+    #info-list {
       list-style: none;
     }
 
-    .details li {
-      padding: 14px 0;
+    #info-list li {
+      padding: 12px 0;
       border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-      font-size: 1.05rem;
-      line-height: 1.5;
+      color: #ffffff;
       overflow-wrap: anywhere;
     }
 
-    .details li:last-child {
+    #info-list li:last-child {
       border-bottom: none;
     }
 
-    .details strong {
+    #info-list b {
       display: block;
-      font-weight: 800;
-      font-size: 0.95rem;
+      font-size: 15px;
       color: #ffd166;
-      margin-bottom: 2px;
     }
 
-    .details a {
+    #info-list a {
       color: #ffffff;
       text-decoration: underline;
-      text-underline-offset: 3px;
     }
 
-    .details a:hover,
-    .details a:focus-visible {
+    #info-list a:hover {
       color: #ffd166;
-      outline: none;
     }
 
-    /* Phones and small screens: stack the photo above the text */
-    @media (max-width: 720px) {
-      .contact-box {
+    /* ---------- PHONES ---------- */
+    @media (max-width: 680px) {
+      #card {
         flex-direction: column;
-        padding: 36px 28px;
-        gap: 32px;
+        padding: 32px 24px;
+        gap: 28px;
       }
-
-      .photo {
-        flex: none;
-        width: 100%;
-        max-width: 280px;
-        height: 320px;
-      }
-
-      .details {
-        width: 100%;
-      }
-
-      .details h1 {
-        font-size: 2rem;
-      }
+      #title { font-size: 28px; }
     }
